@@ -30,3 +30,4 @@ Route::get('activities', [App\Http\Controllers\API\ActivityController::class, 'a
 
 Route::post('register', [UserController::class, 'register']);
 Route::post('login', [UserController::class, 'login']);
+Route::get('users', [UserController::class, 'users']);
