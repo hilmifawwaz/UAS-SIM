@@ -17,7 +17,7 @@ class ActivityController extends Controller
         $limit = $request->input('limit', 6);
 
         if ($id) {
-            $activity = Activity::with(['types', 'details'])->find($id);
+            $activity = Activity::with(['details'])->find($id);
 
             if ($activity) {
                 return ResponseFormatter::success(
@@ -31,7 +31,7 @@ class ActivityController extends Controller
                 );
             }
         }
-        $activity = Activity::with(['types', 'details']);
+        $activity = Activity::with(['details']);
 
         if ($id) {
             $activity;
