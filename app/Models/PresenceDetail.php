@@ -19,7 +19,7 @@ class PresenceDetail extends Model
 
     public function activity()
     {
-        return $this->hasOne(Activity::class, 'id', 'activities_id');
+        return $this->belongsTo(Activity::class, 'id', 'activities_id');
     }
 
     public function presences()
