@@ -24,11 +24,6 @@ class UserController extends Controller
         return ResponseFormatter::success($request->user(), 'Data profile user berhasil diambil');
     }
 
-    public function users(Request $request)
-    {
-        return ResponseFormatter::success($request->user(), 'Data profile user berhasil diambil');
-    }
-
     /**
      * @param Request $request
      * @return \Illuminate\Http\JsonResponse
